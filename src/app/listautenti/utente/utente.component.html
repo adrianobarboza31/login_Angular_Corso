@@ -1,0 +1,12 @@
+<div *ngIf="utente">
+  {{ utente.nome }}
+  {{ utente.status }}
+  {{ utente.cambi }}
+  <button (click)="change()">cambia</button>
+</div>
+<div *ngIf="ut">
+  {{ ut.nome }}
+  {{ ut.status }}
+  {{ ut.cambi }}
+  <button (click)="change()">cambia</button>
+</div>

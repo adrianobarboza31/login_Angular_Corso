@@ -1,0 +1,13 @@
+<div>
+  <button (click)="stampa()">stampa</button>
+  <ul>
+    <li *ngFor="let utente of online">
+      <app-utente [utente]="utente"></app-utente>
+    </li>
+  </ul>
+  <ul>
+    <li *ngFor="let ut of offline">
+      <app-utente [ut]="ut"></app-utente>
+    </li>
+  </ul>
+</div>
