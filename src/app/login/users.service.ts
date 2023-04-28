@@ -41,6 +41,11 @@ export class UsersService {
       let index = this.activeUsers.indexOf(users);
       this.activeUsers.splice(index, 1);
       this.inactiveUsers.push(users);
+    } else if (users.status == false) {
+      users.status = !users.status;
+      let index = this.inactiveUsers.indexOf(users);
+      this.inactiveUsers.splice(index, 1);
+      this.activeUsers.push(users);
     } else {
       users.status = !users.status;
       let index = this.inactiveUsers.indexOf(users);

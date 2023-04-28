@@ -13,9 +13,13 @@ export class LoginComponent {
   cambi: number = 0;
   constructor(private UsersService: UsersService) {}
   aggiungi() {
-    let boolStatus = Boolean(this.status);
+    if (this.status == true) {
+      this.status = true;
+    } else {
+      this.status = false;
+    }
 
-    let utente = new user(this.nome, this.cognome, boolStatus, this.cambi);
+    let utente = new user(this.nome, this.cognome, this.status, this.cambi);
     this.UsersService.newUser(utente);
   }
 }
